@@ -349,7 +349,7 @@ li {
 }
 .portfolio > .portfolio-item {
   width: 370px;
-  padding: 20px 24px;
+  padding: 0;
   text-align: center;
   margin-left: 30px;
   margin-top: 30px;
