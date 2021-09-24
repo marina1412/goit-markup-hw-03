@@ -7,6 +7,7 @@
   --fone-color: #f5f4fa;
   --fone-color-black: #2f303a;
   --border-header: #ececec;
+  --border-portfolio: #eeeeee;
   --footer-address: rgba(255, 255, 255, 0.6);
 }
 
@@ -29,7 +30,8 @@ h1,
 h2,
 h3,
 ul,
-p {
+p,
+li {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -45,6 +47,10 @@ img {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
 }
 .web {
   color: var(--accent-color);
@@ -59,32 +65,62 @@ li {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 0;
   padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 /*Стили к header*/
 .header {
-  border-top-color: var(--border-header);
+  border-bottom: solid 1px var(--border-header);
 }
 .sitenav,
 .contacts {
   padding: 0;
 }
+.main-nav {
+  display: flex;
+}
+.sitenav {
+  display: flex;
+  margin-right: 320px;
+}
+.nav {
+  display: flex;
+}
 .sitenav-link {
   color: var(--title-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.sitenav-item {
+  margin-right: 50px;
+}
+.sitenav-item:last-child {
+  margin-right: 0;
 }
 .sitenav-link:hover,
 .sitenav-link:focus {
   color: var(--accent-color);
 }
+.contacts {
+  display: flex;
+}
+.contacts-item {
+  margin-right: 50px;
+}
 .contacts-link {
   color: var(--text-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-
+.contacts-item:last-child {
+  margin-right: 0;
+}
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
@@ -139,6 +175,7 @@ li {
 /*Стили main*/
 .features {
   padding: 0;
+  display: flex;
 }
 .section-features {
   padding-bottom: 94px;
@@ -173,6 +210,7 @@ li {
 }
 .works {
   padding: 0;
+  display: flex;
 }
 .works-photo {
   padding: 0;
@@ -181,6 +219,10 @@ li {
 .works-item {
   padding: 0;
   margin: 0;
+  margin-left: 30px;
+}
+.works-item:first-child {
+  margin-left: 0;
 }
 .features-text {
   font-size: 14px;
@@ -190,6 +232,9 @@ li {
   background-color: var(--fone-color);
   padding-bottom: 94px;
   padding-top: 94px;
+}
+.team {
+  display: flex;
 }
 .team-title {
   font-weight: 500;
@@ -208,9 +253,15 @@ li {
 .team-item {
   width: 270px;
   text-align: center;
+  margin-left: 30px;
+}
+.team-item:first-child {
+  margin-left: 0;
 }
 .footer {
   background-color: var(--fone-color-black);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-logo {
   font-family: Raleway;
@@ -257,15 +308,36 @@ li {
   cursor: pointer;
   padding: 6px 22px;
 }
+.portfolio-section {
+  padding-top: 94px;
+}
 .filtr {
+  width: 1200px;
   padding-bottom: 16px;
-  margin-bottom: 34px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: center;
+}
+.filtr-button {
+  margin-right: 8px;
+  border: transparent;
+  border-radius: 4px;
 }
 .filtr-button:focus,
 .filtr-button:hover {
   background-color: var(--accent-color);
   color: var(--primary-title-color);
   font-family: inherit;
+}
+.portfolio {
+  padding: 0;
+  padding-bottom: 94px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 .portfolio-title {
   color: var(--title-color);
@@ -275,14 +347,20 @@ li {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.portfolio-item {
+.portfolio > .portfolio-item {
   width: 370px;
   padding: 20px 24px;
   text-align: center;
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 3 - 30px);
 }
 .portfolio-text {
   font-size: 16px;
   line-height: 1.87;
 
   color: var(--text-color);
+}
+.portfolio-div {
+  border: solid 1px var(--border-portfolio);
 }
